@@ -23,20 +23,38 @@
 	<input id="No" [(ngModel)]="no" placeholder="Enter your Phone Number"  required>
 	<br>
 	<br>
-	<button id="ko" (click)="setValue()" >     Set value     </button>
-	<h2 hidden id="ID">ID CARD</h2>
+	<a href="/idCardGenerated"><button id="ko" (click)="setValue() " >     Set value     </button></a>
+	<h2  id="ID">ID CARD</h2>
 	<br>
 	<br>
+<!-- ########################################## -->
 	<div id="doc" >
 	<div id="boom">
-		<qrcode id="qrcode"  [qrdata]="name" [width]="150" [errorCorrectionLevel]="'M'" Hidden></qrcode>
 		
-		<img id="imagebox" src="data:image/png;base64,{{image}}" width="150px" height="150px"  Hidden>
-		<br>
-</div>
-	<h3 hidden id="Namedis"><b>Name :</b> {{name}}</h3>
-	<h3 hidden id="ageis"><b>Age :</b> {{age}}</h3>
+		
+		<img id="imagebox" src="data:image/jpeg;base64,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" width="150px" height="150px"  >
+		<p>Designation: CEO of India</p>
+		
+	</div>
+	<div id="id-details">
+		<h3 id="Namedis"><b class="iddet-head">Name :</b> {{name}}</h3>
+		<h3  id="ageis"><b class="iddet-head">Age :</b> {{age}}</h3>
+	    <h3  id="dept"><b class="iddet-head">Department :</b> {{dept}}</h3>
+		<h3  id="DOB"><b class="iddet-head">DOB :</b> {{dob}}</h3>
+		<h5 id="blood-grp"><b class="iddet-head">Blood Grp:</b> {{bg}}</h5>
+
+		
+	</div>
+	<div id="digsig-cont">
+		<div id="qr-cont">
+			<h3> Digital Signture</h3>
+			<qrcode id="qrcode"  [qrdata]="name" [width]="75"  [errorCorrectionLevel]="'M'" ></qrcode>
+			<p>Scan to Verify</p>
+		</div>
+	</div>
+
 
 </div>
+<!-- ########################################## -->
 </div>
 

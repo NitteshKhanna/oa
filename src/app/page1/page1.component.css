@@ -47,33 +47,65 @@ input::placeholder
 #imagebox{
 
     border-radius: 25px;
-    align-self: flex-end;
+    align-self: flex-start;
+    float: left;
+    height: 225px;
+    margin: 15px;
+
 }
 #doc
-{
-    width: 70%;
+{  display: grid;
+    grid-template-columns: 30% 50% 20%;
+    width: 750px;
+    height: 350px;
+   margin:auto;
     border-radius: 30px;
-    /* background-color: #a4a7b1; */
-    margin: auto;
+    background-color: #1440d2;
+    box-shadow:  1em 1em 0.6cm gold;
+    border: 2px solid gold;
+
+    
 }
 #boom{
     background-color: rgba(240, 248, 255, 0);
-    text-align: center;
+   
     width: 90%;
     border-radius: 30px;
-    margin: auto;
-    justify-content:space-evenly;
-    display: flex;
+    
+   
+    
     padding: 1%;
     
 }
+
+#digsig-cont
+{
+  display: flex;
+  align-items: flex-end;
+  align-self: right;
+  float: right;
+   
+
+
+}
+#id-details
+{
+    color: aliceblue;
+}
+
 h2{
     font-family: 'Roboto Condensed', sans-serif;
     color: aliceblue;
 }
-h3{
+h3,#blood-grp{
     
     color: antiquewhite;
     text-align: left;
     font-family: 'Roboto Condensed', sans-serif;
 }
+.iddet-head
+{
+    
+    text-shadow: 0 0 2px #ff0000;
+}
+
