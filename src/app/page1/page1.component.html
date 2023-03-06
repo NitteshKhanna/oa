@@ -1,0 +1,42 @@
+	
+	<script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/qrcodejs/1.0.0/qrcode.min.js"></script>	
+
+<div class="box">
+	<div>
+		<br>
+		<br>
+	<b><input id="Name1"[(ngModel)]="name" #ctrl="ngModel" placeholder="Enter your name" required></b>
+	<br><br>
+
+
+
+
+	<input id="Age" [(ngModel)]="age"placeholder="Enter your age"  required>
+	<br><br>
+	<input id="Bloodgrp" [(ngModel)]="bg" placeholder="Enter your Bloodgrp"  required>
+	<br><br>
+	<input id="DOB" [(ngModel)]="dob"placeholder="Enter your DOB"  required>
+	<br><br>
+	<input id="Dept" [(ngModel)]="dept" placeholder="Enter your Dept"  required>
+	<br><br>
+	<input id="No" [(ngModel)]="no" placeholder="Enter your Phone Number"  required>
+	<br>
+	<br>
+	<button id="ko" (click)="setValue()" >     Set value     </button>
+	<h2 hidden id="ID">ID CARD</h2>
+	<br>
+	<br>
+	<div id="doc" >
+	<div id="boom">
+		<qrcode id="qrcode"  [qrdata]="name" [width]="150" [errorCorrectionLevel]="'M'" Hidden></qrcode>
+		
+		<img id="imagebox" src="data:image/png;base64,{{image}}" width="150px" height="150px"  Hidden>
+		<br>
+</div>
+	<h3 hidden id="Namedis"><b>Name :</b> {{name}}</h3>
+	<h3 hidden id="ageis"><b>Age :</b> {{age}}</h3>
+
+</div>
+</div>
+
